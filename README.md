@@ -86,6 +86,10 @@ Deleted branch test (was c69ab60).
 ```
 
 
+
+### Exercise 2
+
+
 ```bash
 User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (main)
 $ code home.html
