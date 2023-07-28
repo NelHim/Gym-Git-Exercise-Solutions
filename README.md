@@ -512,3 +512,290 @@ User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-So
 $
 
 ```
+
+
+## Bundle 3
+
+### Exercise 1
+
+```bash 
+
+  User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (main)
+$ git checkout ft/team-page
+error: pathspec 'ft/team-page' did not match any file(s) known to git   
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/team-page)
+$ code team.html
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git status
+On branch ft/team-page
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   team.html
+
+no changes added to commit (use "git add" and/or "git commit -a")       
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git add .
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git status
+On branch ft/team-page
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   team.html
+
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git commit -m "Team file"
+[ft/team-page 1a28c1b] Team file
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking       
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git push --set-upstream origin ft/team-page
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 293 bytes | 293.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.   
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting: 
+remote:      https://github.com/NelHim/Gym-Git-Exercise-Solutions/pull/new/ft/team-page
+remote:
+To https://github.com/NelHim/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git checkout ft/team-page 
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git log
+commit 1a28c1b2135beac3fe26c5630225bc3112152a7b (HEAD -> ft/team-page, origin/ft/team-page)
+Author: NelHim <n.himbaza@alustudent.com>
+Date:   Fri Jul 28 11:14:40 2023 +0200
+
+    Team file
+
+commit db3f69d037035caa647c18dcec9aca619e6b077d (origin/main, origin/HEAD, main, ft/contact-page)
+Author: NelHim <n.himbaza@alustudent.com>
+Date:   Thu Jul 27 11:35:13 2023 +0200
+
+    Bundle 2 Exercise 2
+
+commit 0cbd9120fcd29ca408d27a810af2c66129dccd57
+Author: NelHim <n.himbaza@alustudent.com>
+Date:   Thu Jul 27 11:24:19 2023 +0200
+
+    Modified services
+
+commit eabad580a49a0c6e1c5761443919e0efeee4a3c9
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git checkout ft/contact-page 
+Switched to branch 'ft/contact-page'
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git cherry-pick 1a28c1b2135beac3fe26c5630225bc3112152a7b
+[ft/contact-page 40f3013] Team file
+ Date: Fri Jul 28 11:14:40 2023 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ code contact.html
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git log
+commit 40f301336a6a123a9ad2848da044ffacddc7f1bc (HEAD -> ft/contact-page)
+Author: NelHim <n.himbaza@alustudent.com>
+Date:   Fri Jul 28 11:14:40 2023 +0200
+
+    Team file
+
+commit db3f69d037035caa647c18dcec9aca619e6b077d (origin/main, origin/HEAD, main)
+Author: NelHim <n.himbaza@alustudent.com>
+Date:   Thu Jul 27 11:35:13 2023 +0200
+
+    Bundle 2 Exercise 2
+
+commit 0cbd9120fcd29ca408d27a810af2c66129dccd57
+Author: NelHim <n.himbaza@alustudent.com>
+Date:   Thu Jul 27 11:24:19 2023 +0200
+
+    Modified services
+
+commit eabad580a49a0c6e1c5761443919e0efeee4a3c9
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git status
+On branch ft/contact-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)        
+        contact.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git add .
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git commit -m "create the contact page"
+[ft/contact-page 308fa5e] create the contact page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 contact.html
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git status
+On branch ft/contact-page
+nothing to commit, working tree clean
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git push
+fatal: The current branch ft/contact-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/contact-page
+
+To have this happen automatically for branches without a tracking       
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/contact-page)
+$   git push --set-upstream origin ft/contact-page
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 735 bytes | 735.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.   
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/NelHim/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/NelHim/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ code faq.html
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git status
+On branch ft/faq-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)        
+        faq.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git add .
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git commit -m "Create the faq page"
+[ft/faq-page 70f1230] Create the faq page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git push
+fatal: The current branch ft/faq-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/faq-page
+
+To have this happen automatically for branches without a tracking       
+$ git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 478 bytes | 478.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/NelHim/Gym-Git-Exercise-Solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/NelHim/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git revert 1a28c1b2135beac3fe26c5630225bc3112152a7b
+
+hint: Waiting for your editor to close the file...
+
+                                                   Vim: Error reading input, exiting...
+Vim: Finished.
+error: There was a problem with the editor 'vi'.
+Please supply the message using either -m or -F option.
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git status
+On branch ft/faq-page
+Your branch is up to date with 'origin/ft/faq-page'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   team.html
+
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git add .
+
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git commit -m "reverted the last commit of the ft/team-page"
+[ft/faq-page 885c44d] reverted the last commit of the ft/team-page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 327 bytes | 327.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/NelHim/Gym-Git-Exercise-Solutions.git
+   70f1230..885c44d  ft/faq-page -> ft/faq-page
+
+
+```
