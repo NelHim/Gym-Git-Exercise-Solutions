@@ -969,3 +969,73 @@ To https://github.com/NelHim/Gym-Git-Exercise-Solutions.git
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 
 ```
+
+
+## Bundle 4
+
+### Exeercise 1
+
+```bash
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (main)
+$ git remote add git-copy https://github.com/NelHim/git-exercise-clone.git
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (main)
+$ git remote
+git-copy
+origin
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (main)
+$ ls
+about.html    faq.html   README.md      team.html
+contact.html  home.html  services.html
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (main)
+$ code home.html
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)      
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a") 
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (main)
+$ git add .
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (main)
+$ git commit -m "Updated home page"
+[main b77db7f] Updated home page
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 366 bytes | 366.00 KiB/s, done.      
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/NelHim/Gym-Git-Exercise-Solutions.git       
+   451c39c..b77db7f  main -> main
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (main)
+$ git push git-copy 
+Enumerating objects: 85, done.
+Counting objects: 100% (85/85), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (82/82), done.
+Writing objects: 100% (85/85), 15.93 KiB | 2.27 MiB/s, done.      
+Total 85 (delta 44), reused 5 (delta 0), paDelta compression using up to 12 threads   
+Compressing objects: 100% (82/82), done.   
+e.
+To https://github.com/NelHim/git-exercise-clone.git
+ * [new branch]      main -> main
+
+```
