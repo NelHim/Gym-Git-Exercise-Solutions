@@ -973,7 +973,7 @@ branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 
 ## Bundle 4
 
-### Exeercise 1
+### Exercise 1
 
 ```bash
 
