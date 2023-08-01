@@ -1039,3 +1039,159 @@ To https://github.com/NelHim/git-exercise-clone.git
  * [new branch]      main -> main
 
 ```
+
+
+```bash
+
+  ### Exercise 2
+
+  User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ ls
+about.html    faq.html   README.md      team.html
+contact.html  home.html  services.html
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ code home.html 
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ git status
+On branch ft/footer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)      
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a") 
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ git add .
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ git commit -m "Updated home file"
+[ft/footer ceba866] Updated home file
+ 1 file changed, 4 insertions(+)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ git status
+On branch ft/footer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)      
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a") 
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ git add .
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ git commit -m "Added more changes to the home page"
+[ft/footer c862550] Added more changes to the home page
+ 1 file changed, 2 insertions(+)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use    
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking 
+upstream, see 'push.autoSetupRemote' in 'git help config'.        
+
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ git push --set-upstream origin ft/footer
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 627 bytes | 627.00 KiB/s, done.      
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/NelHim/Gym-Git-Exercise-Solutions/pull/new/ft/footer
+remote:
+To https://github.com/NelHim/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git merge --squash ft/footer 
+Updating 4ae23b1..c862550
+Fast-forward
+Squash commit -- not updating HEAD
+ home.html | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git status
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   home.html
+
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git commit -m "footer changes squashing"
+[ft/squashing 88c3f2c] footer changes squashing
+ 1 file changed, 6 insertions(+)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git push
+fatal: The current branch ft/squashing has no upstream branch.    
+To push the current branch and set the remote as upstream, use    
+
+    git push --set-upstream origin ft/squashing
+
+To have this happen automatically for branches without a tracking 
+upstream, see 'push.autoSetupRemote' in 'git help config'.        
+
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git push --set-upstream origin ft/footer
+Everything up-to-date
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git status
+On branch ft/squashing
+nothing to commit, working tree clean
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git push
+fatal: The current branch ft/squashing has no upstream branch.
+To push the current branch and set the remote as upstream, use    
+
+    git push --set-upstream origin ft/squashing
+
+To have this happen automatically for branches without a tracking 
+upstream, see 'push.autoSetupRemote' in 'git help config'.        
+
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git push origin ft/squashing 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.05 KiB | 1.05 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/NelHim/Gym-Git-Exercise-Solutions.git
+   88c3f2c..f94a79e  ft/squashing -> ft/squashing
+```
