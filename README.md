@@ -1184,25 +1184,14 @@ upstream, see 'push.autoSetupRemote' in 'git help config'.
 
 
 User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/squashing)
-$ git push orign ft/s
-ft/service-redesign   ft/squashing
-
-User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/squashing)
-$ git push orign ft/squashing 
-fatal: 'orign' does not appear to be a git repository
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-
-6.00 KiB/s, done.
+$ git push origin ft/squashing 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.05 KiB | 1.05 MiB/s, done.
 Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-remote:
-remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
-remote:      https://github.com/NelHim/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
-remote:
-To https://github.com/NelHim/Gym-Git-Exercise-Solutions.git       
- * [new branch]      ft/squashing -> ft/squashing
-
+To https://github.com/NelHim/Gym-Git-Exercise-Solutions.git
+   88c3f2c..f94a79e  ft/squashing -> ft/squashing
 ```
