@@ -1197,7 +1197,7 @@ To https://github.com/NelHim/Gym-Git-Exercise-Solutions.git
 
 ## Bundle 5
 
-### Exercise 1
+### Exercise 2
 
 ```bash
 
