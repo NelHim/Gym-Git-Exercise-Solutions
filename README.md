@@ -1040,10 +1040,8 @@ To https://github.com/NelHim/git-exercise-clone.git
 
 ```
 
-
+### Exercise 2
 ```bash
-
-  ### Exercise 2
 
   User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (main)
 $ git checkout -b ft/footer
