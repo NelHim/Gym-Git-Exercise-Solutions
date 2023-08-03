@@ -1250,3 +1250,94 @@ To https://github.com/NelHim/git-cafe-exercise.git
 
 
 ```
+
+
+## Bundle 6
+
+### Exercise 1
+
+```bash
+
+  User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ ls
+bat/  images/     index-1.html  index-3.html  js/
+css/  index.html  index-2.html  index-4.html  README.md
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ cd css/
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise/css (new-feature)
+$ ls
+animate.css  contact-form.css  grid.css             style.css
+camera.css   google-map.css    jquery.fancybox.css
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise/css (new-feature)
+$ cd ..
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ ls
+bat/  images/     index-1.html  index-3.html  js/
+css/  index.html  index-2.html  index-4.html  README.md
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ code Menu
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ mv Menu menu.html
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ ls
+bat/  images/     index-1.html  index-3.html  js/        README.md
+css/  index.html  index-2.html  index-4.html  menu.html
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ code menu.html 
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ git status
+On branch new-feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)        
+        menu.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ git add .
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ git commit -m "Created a menu page"
+[new-feature 4c7676b] Created a menu page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 menu.html
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ git push
+fatal: The current branch new-feature has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin new-feature
+
+To have this happen automatically for branches without a tracking       
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ git push --set-upstream origin new-feature
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 442 bytes | 442.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.    
+remote:
+remote: Create a pull request for 'new-feature' on GitHub by visiting:  
+remote:      https://github.com/NelHim/git-cafe-exercise/pull/new/new-feature
+remote:
+To https://github.com/NelHim/git-cafe-exercise.git
+ * [new branch]      new-feature -> new-feature
+branch 'new-feature' set up to track 'origin/new-feature'.
+
+
+```
