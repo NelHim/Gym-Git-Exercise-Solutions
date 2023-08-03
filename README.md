@@ -1402,3 +1402,55 @@ User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-So
 $
 
 ```
+
+### Exercise 3
+
+```bash
+
+  User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+$ ls
+bat/  images/     index-1.html  index-3.html  js/
+css/  index.html  index-2.html  index-4.html  README.md
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+$ git add .
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+$ git commit -m "Updated the telephone number"
+[main c79661a] Updated the telephone number
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 307 bytes | 307.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.   
+To https://github.com/NelHim/git-cafe-exercise.git
+   0986ab8..c79661a  main -> main
+
+
+```
