@@ -1040,6 +1040,420 @@ To https://github.com/NelHim/git-exercise-clone.git
 
 ```
 
+### Exercise 2
+```bash
+
+  User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ ls
+about.html    faq.html   README.md      team.html
+contact.html  home.html  services.html
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ code home.html 
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ git status
+On branch ft/footer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)      
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a") 
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ git add .
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ git commit -m "Updated home file"
+[ft/footer ceba866] Updated home file
+ 1 file changed, 4 insertions(+)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ git status
+On branch ft/footer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)      
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a") 
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ git add .
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ git commit -m "Added more changes to the home page"
+[ft/footer c862550] Added more changes to the home page
+ 1 file changed, 2 insertions(+)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use    
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking 
+upstream, see 'push.autoSetupRemote' in 'git help config'.        
+
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ git push --set-upstream origin ft/footer
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 627 bytes | 627.00 KiB/s, done.      
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/NelHim/Gym-Git-Exercise-Solutions/pull/new/ft/footer
+remote:
+To https://github.com/NelHim/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/footer)
+$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git merge --squash ft/footer 
+Updating 4ae23b1..c862550
+Fast-forward
+Squash commit -- not updating HEAD
+ home.html | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git status
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   home.html
+
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git commit -m "footer changes squashing"
+[ft/squashing 88c3f2c] footer changes squashing
+ 1 file changed, 6 insertions(+)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git push
+fatal: The current branch ft/squashing has no upstream branch.    
+To push the current branch and set the remote as upstream, use    
+
+    git push --set-upstream origin ft/squashing
+
+To have this happen automatically for branches without a tracking 
+upstream, see 'push.autoSetupRemote' in 'git help config'.        
+
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git push --set-upstream origin ft/footer
+Everything up-to-date
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git status
+On branch ft/squashing
+nothing to commit, working tree clean
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git push
+fatal: The current branch ft/squashing has no upstream branch.
+To push the current branch and set the remote as upstream, use    
+
+    git push --set-upstream origin ft/squashing
+
+To have this happen automatically for branches without a tracking 
+upstream, see 'push.autoSetupRemote' in 'git help config'.        
+
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git push origin ft/squashing 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.05 KiB | 1.05 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/NelHim/Gym-Git-Exercise-Solutions.git
+   88c3f2c..f94a79e  ft/squashing -> ft/squashing
+```
+
+
+## Bundle 5
+
+### Exercise 2
+
+```bash
+
+  User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+$ ls
+bat/  images/     index-1.html  index-3.html  js/
+css/  index.html  index-2.html  index-4.html  README.md
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+$ git add .
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+$ git commit -m "Modified index.html"
+[main 0986ab8] Modified index.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 322 bytes | 322.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/NelHim/git-cafe-exercise.git
+   d1d3f9c..0986ab8  main -> main
+
+
+```
+
+
+## Bundle 6
+
+### Exercise 1
+
+```bash
+
+  User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ ls
+bat/  images/     index-1.html  index-3.html  js/
+css/  index.html  index-2.html  index-4.html  README.md
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ cd css/
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise/css (new-feature)
+$ ls
+animate.css  contact-form.css  grid.css             style.css
+camera.css   google-map.css    jquery.fancybox.css
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise/css (new-feature)
+$ cd ..
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ ls
+bat/  images/     index-1.html  index-3.html  js/
+css/  index.html  index-2.html  index-4.html  README.md
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ code Menu
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ mv Menu menu.html
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ ls
+bat/  images/     index-1.html  index-3.html  js/        README.md
+css/  index.html  index-2.html  index-4.html  menu.html
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ code menu.html 
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ git status
+On branch new-feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)        
+        menu.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ git add .
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ git commit -m "Created a menu page"
+[new-feature 4c7676b] Created a menu page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 menu.html
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ git push
+fatal: The current branch new-feature has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin new-feature
+
+To have this happen automatically for branches without a tracking       
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ git push --set-upstream origin new-feature
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 442 bytes | 442.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.    
+remote:
+remote: Create a pull request for 'new-feature' on GitHub by visiting:  
+remote:      https://github.com/NelHim/git-cafe-exercise/pull/new/new-feature
+remote:
+To https://github.com/NelHim/git-cafe-exercise.git
+ * [new branch]      new-feature -> new-feature
+branch 'new-feature' set up to track 'origin/new-feature'.
+
+
+```
+
+
+### Exercise 2
+
+```bash
+
+  User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ git checkout -b bug-fix
+Switched to a new branch 'bug-fix'
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (bug-fix)
+$ code index-4.html
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (bug-fix)
+$ git status
+On branch bug-fix
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")       
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (bug-fix)
+$ git add .
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (bug-fix)
+$ git commit -m "Modified index-4.html file"
+[bug-fix 5ec6ec3] Modified index-4.html file
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (bug-fix)
+$ git push
+fatal: The current branch bug-fix has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin bug-fix
+
+To have this happen automatically for branches without a tracking       
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (bug-fix)
+$ git push --set-upstream origin bug-fix
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 312 bytes | 312.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bug-fix' on GitHub by visiting:
+remote:      https://github.com/NelHim/git-cafe-exercise/pull/new/bug-fix
+remote:
+To https://github.com/NelHim/git-cafe-exercise.git
+ * [new branch]      bug-fix -> bug-fix
+branch 'bug-fix' set up to track 'origin/bug-fix'.
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (bug-fix)
+$
+
+```
+
+### Exercise 3
+
+```bash
+
+  User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+$ ls
+bat/  images/     index-1.html  index-3.html  js/
+css/  index.html  index-2.html  index-4.html  README.md
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+$ git add .
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+$ git commit -m "Updated the telephone number"
+[main c79661a] Updated the telephone number
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 307 bytes | 307.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.   
+To https://github.com/NelHim/git-cafe-exercise.git
+   0986ab8..c79661a  main -> main
+
+
+```
 
 ```bash
 
