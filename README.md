@@ -1341,3 +1341,64 @@ branch 'new-feature' set up to track 'origin/new-feature'.
 
 
 ```
+
+
+### Exercise 2
+
+```bash
+
+  User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (new-feature)
+$ git checkout -b bug-fix
+Switched to a new branch 'bug-fix'
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (bug-fix)
+$ code index-4.html
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (bug-fix)
+$ git status
+On branch bug-fix
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")       
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (bug-fix)
+$ git add .
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (bug-fix)
+$ git commit -m "Modified index-4.html file"
+[bug-fix 5ec6ec3] Modified index-4.html file
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (bug-fix)
+$ git push
+fatal: The current branch bug-fix has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin bug-fix
+
+To have this happen automatically for branches without a tracking       
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (bug-fix)
+$ git push --set-upstream origin bug-fix
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 312 bytes | 312.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bug-fix' on GitHub by visiting:
+remote:      https://github.com/NelHim/git-cafe-exercise/pull/new/bug-fix
+remote:
+To https://github.com/NelHim/git-cafe-exercise.git
+ * [new branch]      bug-fix -> bug-fix
+branch 'bug-fix' set up to track 'origin/bug-fix'.
+
+User@DESKTOP-68G4IPC MINGW64 ~/Desktop/The Gym Program/week3/Gym-Git-Exercise-Solutions/git-cafe-exercise (bug-fix)
+$
+
+```
